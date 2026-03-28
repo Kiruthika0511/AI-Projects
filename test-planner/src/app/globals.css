@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --sidebar-bg: #f8fafc;
+  }
+
+  .dark {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --border: #1e293b;
+    --card-bg: #0f172a;
+    --sidebar-bg: #0f172a;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased;
+  }
+}
+
+@media print {
+  /* Hide sidebar and header and everything except the markdown container */
+  .no-print {
+    display: none !important;
+  }
+  body, main {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .prose {
+    color: black !important;
+    max-width: 100% !important;
+  }
+  .print-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .print-content {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  * {
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
