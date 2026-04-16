@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0E131F;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Custom scrollbar for dark mode */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2A344A;
+  border-radius: 3px;
+}
+
+/* Markdown Output Table Styles */
+.markdown-output h1,
+.markdown-output h2,
+.markdown-output h3,
+.markdown-output h4 {
+  color: #e2e8f0;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-output h1 { font-size: 1.5rem; }
+.markdown-output h2 { font-size: 1.25rem; color: #60a5fa; }
+.markdown-output h3 { font-size: 1.1rem; color: #93c5fd; }
+
+.markdown-output p {
+  margin-bottom: 0.75rem;
+  color: #cbd5e1;
+}
+
+.markdown-output ul,
+.markdown-output ol {
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #cbd5e1;
+}
+
+.markdown-output li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-output strong {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.markdown-output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.84rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #1F293F;
+}
+
+.markdown-output thead {
+  background: #1a2236;
+}
+
+.markdown-output thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #60a5fa;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #2A344A;
+  white-space: nowrap;
+}
+
+.markdown-output tbody tr {
+  border-bottom: 1px solid #1F293F;
+  transition: background-color 0.15s ease;
+}
+
+.markdown-output tbody tr:nth-child(even) {
+  background-color: #111827;
+}
+
+.markdown-output tbody tr:hover {
+  background-color: #1E273C;
+}
+
+.markdown-output tbody td {
+  padding: 0.7rem 1rem;
+  color: #cbd5e1;
+  vertical-align: top;
+  line-height: 1.5;
+  border-right: 1px solid #1F293F;
+}
+
+.markdown-output tbody td:last-child {
+  border-right: none;
+}
+
+.markdown-output code {
+  background: #0A0D14;
+  color: #60a5fa;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  border: 1px solid #1F293F;
+}
+
+.markdown-output pre {
+  background: #0A0D14;
+  border: 1px solid #1F293F;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-output pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.markdown-output hr {
+  border: none;
+  border-top: 1px solid #1F293F;
+  margin: 1.5rem 0;
+}
